@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'CRUD/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<table class="table table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Rollno</th>
+        <th>Project</th>
+    </tr>
+{% for std in std_list %}
+
+<tr>
+    <td>{{std.std_name}}</td>
+    <td>{{std.std_contact}}</td>
+    <td>{{std.std_roll}}</td>
+    <td>{{std.project}}</td>
+    <!-- Here we are making a link for edit that will get only the record of specific id -->
+    <td><a href="{% url 'std_update' std.id %}", class="btn btn-primary">EDIT</a></td>
+     <!-- Here we are making a link for DELETE, that will DELETE the record of specific id -->
+     <td><a href="{% url 'std_delete' std.id %}", class="btn btn-danger">DELETE</a></td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock content %}

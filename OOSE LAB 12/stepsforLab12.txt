@@ -1,0 +1,14 @@
+Create app
+Creare new URLS for new app
+add new line in projects urls
+
+Create Template Directory the add index.html
+run migrate command
+App configure in setting file
+Create Models
+run makemigrations Command 'py manage.py makemigrations'
+run sqlmigration command 
+Create Form (form.py)
+
+Create html file
+intall crispy_form (pip install django-crispy-forms)

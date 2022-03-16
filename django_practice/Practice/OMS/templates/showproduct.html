@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+{% block content %}
+<html>
+    <head>
+    </head>
+    <body>
+        <table  class="table table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Product No</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Customer</th>
+            </tr>
+            {% for pro in pro_lst %}
+            <tr>
+                <td>{{pro.id}}</td>
+                <td>{{pro.product_no}}</td>
+                <td>{{pro.product_name}}</td>
+                <td>{{pro.product_price}}</td>
+                <td>{{pro.customer}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
+
+{% endblock content %}

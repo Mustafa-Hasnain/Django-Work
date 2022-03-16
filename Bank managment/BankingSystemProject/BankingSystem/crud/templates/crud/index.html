@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{%load static%}
+{%block content%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOMEPAGE</title>
+    <style>
+        .navbar {
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+width: 40%;
+ padding: 20px;
+}
+a{
+color:black;
+font-family:verdana;
+ text-decoration: none;
+ font-size: 30px;
+}
+a:hover, a:active {
+  background-color: #00958F;
+  color: black;
+}
+div{
+background-color:#00958F;}
+    </style>
+
+</head>
+<body bgcolor="#00958F">
+ <div class="bg"> </div >
+<center>
+<div >
+  <div1><img src="{%static 'crud/images/hbl.png'%}"></div1>
+</div>
+<br>
+
+<div class="navbar">
+      <a href="{% url 'addCustomer'%}">Add Customer</a><hr>
+      <a href="{% url 'deposit'%}">Deposit Money</a><hr>
+      <a href="{% url 'withdraw'%}">Withdraw Money</a><hr>
+      <a href="{% url 'transfer'%}">Transfer Money</a><hr>
+    <a href="{% url 'show'%}">Show accounts</a><hr>
+</div>
+    </center>
+</body>
+</html>
+{%endblock content%}

@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+{% extends "crud/base.html" %}
+{%load static%}
+{% load crispy_forms_tags %}
+{%block content%}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'crud/css/nunito-font.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'crud/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css'%}">
+    <link rel="stylesheet" href="{% static 'crud/css/style.css'%}"/>
+    <meta charset="UTF-8">
+    <title>AddAcount</title>
+</head>
+<body>
+
+<div class="page-content">
+		<div class="wizard-v5-content">
+			<div class="wizard-form">
+				 <center>
+                    <h1 style="color:white;">ACCOUNT DETAILS</h1>
+		        <form class="form-register" id="form-register" action="#" method="POST" style="color:#ffffff; padding:10px;">
+                    {% csrf_token %}
+                    <div id="form-total">
+                    <br>
+                        {{form.account_num | as_crispy_field}}
+                        {{form.account_name | as_crispy_field}}
+                        {{form.balance | as_crispy_field}}
+                        {{form.branch_name | as_crispy_field}}
+                        {{form.customer_name | as_crispy_field}}
+                        <br>
+                        <input type="submit" values="Save" class="btn btn-success"><
+
+                    </div>
+                </form></center>
+
+			</div>
+
+		</div>
+</div>
+
+	<script src="{% static 'crud/js/jquery-3.3.1.min.js'%}"></script>
+	<script src="{% static 'crud/js/jquery.steps.js'%}"></script>
+	<script src="{% static 'crud/js/main.js'%}"></script>
+
+</body>
+</html>
+{%endblock content%}

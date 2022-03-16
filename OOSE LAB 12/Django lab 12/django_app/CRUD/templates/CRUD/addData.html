@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends 'CRUD/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<html>
+        <head>
+            <title>Add New Record</title>
+        </head>
+        <body>
+            <form action="" method="POST">
+            <div class = "container">
+            {% csrf_token %}
+                {{ form.std_name | as_crispy_field }}
+                <br>
+                {{ form.std_contact | as_crispy_field }}
+                <br>
+                {{ form.std_roll | as_crispy_field }}
+                <br>
+                {{ form.project | as_crispy_field }}
+                <br>
+                <input type="submit" class="btn btn-success" value="save" >
+            </div>
+            
+        </form>
+    {% endblock content %}
+</body>
+</html>
